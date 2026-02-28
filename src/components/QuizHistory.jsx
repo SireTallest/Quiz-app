@@ -22,25 +22,25 @@ function QuizHistory() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-100 p-4">
+    <div className="min-h-screen bg-yellow-100 p-4">
       <div className="max-w-2xl mx-auto">
-        <div className="bg-white rounded-2xl shadow-lg p-8">
+        <div className="bg-white border-4 border-yellow-600 rounded-2xl shadow-lg p-8">
 
           {/* Header */}
           <div className="flex justify-between items-center mb-6">
-            <h1 className="text-2xl font-bold text-gray-800">Quiz History</h1>
+            <h1 className="text-2xl font-bold text-yellow-400">Quiz History</h1>
             <div className="flex gap-3">
               {history.length > 0 && (
                 <button
                   onClick={clearHistory}
-                  className="text-sm text-red-500 hover:text-red-700 transition duration-200"
+                  className="text-sm font-semibold text-red-500 hover:text-red-700 transition duration-200"
                 >
                   Clear History
                 </button>
               )}
               <button
                 onClick={() => navigate('/')}
-                className="bg-blue-600 text-white px-4 py-2 text-sm rounded-lg hover:bg-blue-700 transition duration-200"
+                className="bg-yellow-600 text-yellow-50 px-4 py-2 text-sm rounded-lg hover:bg-yellow-700 transition duration-200"
               >
                 New Quiz
               </button>
@@ -61,22 +61,22 @@ function QuizHistory() {
           ) : (
             <>
               {/* Stats Summary */}
-              <div className="grid grid-cols-3 gap-4 mb-6">
-                <div className="bg-gray-50 rounded-xl p-4 text-center">
-                  <p className="text-2xl font-bold text-blue-600">{history.length}</p>
-                  <p className="text-sm text-gray-500">Total Quizzes</p>
+              <div className="grid grid-cols-3 gap-4 mb-6 cursor-pointer">
+                <div className="bg-yellow-200 hover:transition duration-200 hover:shadow-md hover:scale-105 rounded-xl p-4 text-center">
+                  <p className="text-2xl font-bold text-white">{history.length}</p>
+                  <p className="text-sm font-semibold text-yellow-600">Total Quizzes</p>
                 </div>
-                <div className="bg-gray-50 rounded-xl p-4 text-center">
-                  <p className="text-2xl font-bold text-green-600">
+                <div className="bg-yellow-200 rounded-xl p-4 text-center">
+                  <p className="text-2xl font-bold text-red-500 ">
                     {Math.round(history.reduce((acc, q) => acc + q.percentage, 0) / history.length)}%
                   </p>
-                  <p className="text-sm text-gray-500">Average Score</p>
+                  <p className="text-sm font-semibold text-yellow-600">Average Score</p>
                 </div>
-                <div className="bg-gray-50 rounded-xl p-4 text-center">
-                  <p className="text-2xl font-bold text-yellow-500">
+                <div className="bg-yellow-200 rounded-xl p-4 text-center">
+                  <p className="text-2xl font-bold text-green-700">
                     {Math.max(...history.map(q => q.percentage))}%
                   </p>
-                  <p className="text-sm text-gray-500">Best Score</p>
+                  <p className="text-sm font-semibold text-yellow-600">Best Score</p>
                 </div>
               </div>
 

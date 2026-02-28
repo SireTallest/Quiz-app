@@ -43,7 +43,7 @@ function QuizPage() {
 }, [state, navigate])
 
   function handleAnswer(answer) {
-    if (selectedAnswer) return // prevent changing answer
+    if (selectedAnswer) return // This prevents user from changing answer
     setSelectedAnswer(answer)
 
     const current = questions[currentIndex]
@@ -71,8 +71,8 @@ function QuizPage() {
     }
   }
 
-  if (loading) return <div className="text-center mt-20 text-xl">Loading questions...</div>
-  if (error) return <div className="text-center mt-20 text-red-500">{error}</div>
+  if (loading) return <div className="text-center mt-20 font-bold italic text-yellow-400 text-xl">Loading questions...</div>
+  if (error) return <div className="text-center mt-20 font-bold italic text-red-500">{error}</div>
 
   const current = questions[currentIndex]
 
@@ -87,9 +87,9 @@ function QuizPage() {
         </div>
 
         {/* Progress Bar */}
-        <div className="w-full bg-gray-200 rounded-full h-2 mb-6">
+        <div className="w-full bg-red-600 rounded-full h-2 mb-6">
           <div
-            className="bg-blue-500 h-2 rounded-full transition-all duration-300"
+            className="bg-green-500 h-2 rounded-full transition-all duration-300"
             style={{ width: `${((currentIndex + 1) / questions.length) * 100}%` }}
           />
         </div>
@@ -126,7 +126,7 @@ function QuizPage() {
         {selectedAnswer && (
           <button
             onClick={handleNext}
-            className="w-full bg-blue-600 text-white font-semibold py-2 rounded-lg hover:bg-blue-700 transition duration-200"
+            className="w-full bg-yellow-600 text-white font-semibold py-2 rounded-lg hover:bg-yellow-700 transition duration-200"
           >
             {currentIndex + 1 === questions.length ? 'See Results' : 'Next Question'}
           </button>

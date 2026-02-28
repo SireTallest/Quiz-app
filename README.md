@@ -8,7 +8,8 @@ Built as a capstone project for the **ALX Frontend Development Program**.
 ---
 
 ## 🚀 Live Demo
-
+🔗 **Live Demo:** 
+[quiz-app-tau-orcin-77.vercel.app](https://quiz-app-tau-orcin-77.vercel.app/)
 
 ---
 

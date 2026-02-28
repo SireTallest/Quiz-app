@@ -22,7 +22,7 @@ function QuizSetup() {
     })
   }
 
-  if (loading) return <div className="text-center mt-20 text-xl">Loading categories...</div>
+  if (loading) return <div className="text-center text-yellow-500 mt-20 font-semibold font-sans italic text-xl">Loading categories...</div>
   if (error) return <div className="text-center mt-20 text-red-500">{error}</div>
 
   return (

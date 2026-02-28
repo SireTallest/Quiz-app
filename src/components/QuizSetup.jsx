@@ -27,8 +27,8 @@ function QuizSetup() {
 
   return (
     <div className="min-h-screen bg-gray-100 flex items-center justify-center p-4">
-      <div className="bg-white rounded-2xl shadow-lg p-8 w-full max-w-md">
-        <h1 className="text-3xl font-bold text-center text-blue-600 mb-6">Quiz App</h1>
+      <div className="bg-yellow-200 rounded-2xl shadow-lg p-8 w-full max-w-md">
+        <h1 className="text-3xl font-bold text-center text-yellow-700 mb-6">Quiz App</h1>
 
         {/* Search */}
         <input
@@ -36,14 +36,14 @@ function QuizSetup() {
           placeholder="Search topics..."
           value={search}
           onChange={e => setSearch(e.target.value)}
-          className="w-full border border-gray-300 rounded-lg p-2 mb-4 focus:outline-none focus:ring-2 focus:ring-blue-400"
+          className="w-full border border-yellow-700 rounded-lg p-2 mb-4 focus:outline-none focus:ring-2 focus:ring-yellow-400"
         />
 
         {/* Category Select */}
         <select
           value={selectedCategory}
           onChange={e => setSelectedCategory(e.target.value)}
-          className="w-full border border-gray-300 rounded-lg p-2 mb-4 focus:outline-none focus:ring-2 focus:ring-blue-400"
+          className="w-full border border-yellow-700 rounded-lg p-2 mb-4 focus:outline-none focus:ring-2 focus:ring-yellow-400"
         >
           <option value="">-- Select a Category --</option>
           {filtered.length > 0 ? (
@@ -59,7 +59,7 @@ function QuizSetup() {
         <select
           value={difficulty}
           onChange={e => setDifficulty(e.target.value)}
-          className="w-full border border-gray-300 rounded-lg p-2 mb-4 focus:outline-none focus:ring-2 focus:ring-blue-400"
+          className="w-full border border-yellow-700 rounded-lg p-2 mb-4 focus:outline-none focus:ring-2 focus:ring-yellow-400"
         >
           <option value="easy">Easy</option>
           <option value="medium">Medium</option>
@@ -70,7 +70,7 @@ function QuizSetup() {
         <select
           value={amount}
           onChange={e => setAmount(e.target.value)}
-          className="w-full border border-gray-300 rounded-lg p-2 mb-6 focus:outline-none focus:ring-2 focus:ring-blue-400"
+          className="w-full border border-yellow-700 rounded-lg p-2 mb-6 focus:outline-none focus:ring-2 focus:ring-yellow-400"
         >
           <option value={5}>5 Questions</option>
           <option value={10}>10 Questions</option>
@@ -81,7 +81,7 @@ function QuizSetup() {
         {/* Start Button */}
         <button
           onClick={handleStart}
-          className="w-full bg-blue-600 text-white font-semibold py-2 rounded-lg hover:bg-blue-700 transition duration-200"
+          className="w-full bg-yellow-600 text-yellow-50 font-semibold py-2 rounded-lg hover:bg-yellow-700 transition duration-200"
         >
           Start Quiz
         </button>

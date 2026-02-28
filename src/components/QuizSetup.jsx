@@ -26,8 +26,8 @@ function QuizSetup() {
   if (error) return <div className="text-center mt-20 text-red-500">{error}</div>
 
   return (
-    <div className="min-h-screen bg-gray-100 flex items-center justify-center p-4">
-      <div className="bg-yellow-200 rounded-2xl shadow-lg p-8 w-full max-w-md">
+    <div className="min-h-screen bg-yellow-100 flex items-center justify-center p-4">
+      <div className="bg-yellow-200 border-4 border-yellow-600 rounded-2xl shadow-lg p-8 w-full max-w-md">
         <h1 className="text-3xl font-bold text-center text-yellow-700 mb-6">Quiz App</h1>
 
         {/* Search */}

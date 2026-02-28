@@ -59,7 +59,7 @@ This project leverages a modern web development stack to deliver a robust, effic
 ---
 
 ## 📁 Project Structure
-
+```
 quiz-app/
 ├── public/
 │   └── favicon.ico
@@ -86,6 +86,7 @@ quiz-app/
 ├── tailwind.config.js
 ├── postcss.config.js
 └── vite.config.js
+```
 ```
 
 ---

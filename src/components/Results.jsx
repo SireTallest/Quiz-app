@@ -37,12 +37,12 @@ function Results() {
   }, [])
 
   return (
-    <div className="min-h-screen bg-gray-100 p-4">
+    <div className="min-h-screen bg-yellow-50 p-4">
       <div className="max-w-2xl mx-auto">
 
         {/* Score Card */}
-        <div className="bg-white rounded-2xl shadow-lg p-8 text-center mb-6">
-          <h1 className="text-3xl font-bold text-gray-800 mb-2">Quiz Complete!</h1>
+        <div className="bg-yellow-100 border-4 border-yellow-500 rounded-2xl shadow-lg p-8 text-center mb-6">
+          <h1 className="text-3xl font-bold text-yellow-600 mb-2">Quiz Complete!</h1>
           <p className="text-gray-500 mb-4">Here's how you did</p>
           <div className={`text-6xl font-bold mb-2 ${getScoreColor()}`}>
             {percentage}%
@@ -55,22 +55,22 @@ function Results() {
           <div className="flex gap-4 mt-6 justify-center">
             <button
               onClick={() => navigate('/')}
-              className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition duration-200"
+              className="bg-yellow-600 text-yellow-50 font-bold px-6 py-2 rounded-lg shadow-xl hover:bg-yellow-700 transition duration-200"
             >
               New Quiz
             </button>
             <button
               onClick={() => navigate('/history')}
-              className="bg-gray-200 text-gray-700 px-6 py-2 rounded-lg hover:bg-gray-300 transition duration-200"
+              className="bg-yellow-300 text-gray-700 font-bold px-6 py-2 shadow-xl rounded-lg hover:bg-gray-300 transition duration-200"
             >
               View History
             </button>
           </div>
         </div>
 
-        {/* Per Question Review */}
-        <div className="bg-white rounded-2xl shadow-lg p-8">
-          <h2 className="text-xl font-bold text-gray-800 mb-4">Question Review</h2>
+        {/*Question Review */}
+        <div className="bg-yellow-100 border-4 border-yellow-500 rounded-2xl shadow-lg p-8">
+          <h2 className="text-xl font-bold text-yellow-700 mb-4">Question Review</h2>
           <div className="flex flex-col gap-4">
             {userAnswers.map((item, i) => (
               <div
